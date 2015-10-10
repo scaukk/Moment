@@ -5,10 +5,10 @@
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
 
-// 绑定Home模块到当前入口文件
-define('BIND_MODULE','Home');
-define('BUILD_CONTROLLER_LIST','Base,Index,User,Content,Fav,Mycenter,Common');
-define('BUILD_MODEL_LIST','Base,User,Content,Favuser,Thumb');
+// 绑定Admin模块到当前入口文件
+define('BIND_MODULE','Admin');
+define('BUILD_CONTROLLER_LIST','Base,Index,User,Manager');
+define('BUILD_MODEL_LIST','Base,User');
 
 // 定义应用目录
 define('APP_PATH','./Application/');
