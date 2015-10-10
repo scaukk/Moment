@@ -48,4 +48,4 @@ Temporary Items
 Application/Runtime/
 
 # 忽略所有配置文件
-./Conf/*
+/Conf/*
