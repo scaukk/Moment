@@ -1,14 +1,19 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends BaseController {
-    public function index(){
 
-    	echo \Tools\Ver::$name;
+/**
+ * Home默认的主页控制器
+ */
+class IndexController extends BaseController {
+
+	/**
+	 * 首页
+	 * 进行游客/注册用户判断后，再跳转
+	 * @return [type] [description]
+	 */
+    public function index(){
     	
-    	// p(get_defined_constants(true));
-    	
-    	die;
-        $this->display();
+    	echo "Home/Index/index";
     }
 }

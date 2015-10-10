@@ -1,8 +1,60 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+
+/**
+ * Home分享内容控制器
+ */
 class ContentController extends BaseController {
-    public function index(){
-        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+
+	/**
+	 * 发布分享内容
+	 * @return [type] [description]
+	 */
+    public function share(){
+        
     }
+
+    /**
+	 * 删除分享
+	 * ps: 开启事务，同时删除点赞和评论
+	 * @return [type] [description]
+	 */
+    public function delshare(){
+        
+    }
+
+    /**
+	 * 评论/回复
+	 * @return [type] [description]
+	 */
+    public function comment(){
+        
+    }
+
+    /**
+	 * 删除评论/回复
+	 * ps: 如果该评论有回复，同时删除其下的回复
+	 * @return [type] [description]
+	 */
+    public function delcomment(){
+        
+    }
+
+    /**
+	 * 点赞
+	 * @return [type] [description]
+	 */
+    public function thumb(){
+        
+    }
+
+    /**
+	 * 取消点赞
+	 * @return [type] [description]
+	 */
+    public function cclthumb(){
+        
+    }
+
 }
