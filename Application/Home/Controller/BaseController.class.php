@@ -18,3 +18,4 @@ class BaseController extends CommonController {
     protected function _initialize(){
     	echo "Home/BaseController";
     }
+}
