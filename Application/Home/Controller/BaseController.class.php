@@ -33,7 +33,8 @@ class BaseController extends CommonController {
         // 判断是否存在session
         if (!(session('?LOGIN_FLAG') && session('LOGIN_FLAG'))) {
             // 未登录
-            $this->redirect('Home/User/login', '', 3, '未登录！');
+//            $this->redirect('Home/User/login', '', 3, '未登录！跳转至登录页面...');
+            $this->redirect('User/login', '', 3, '未登录！跳转至登录页面...');
             return;
         }
         
@@ -44,7 +45,7 @@ class BaseController extends CommonController {
             session('USERDATA', null);
             session('LAST_OP_TIME', null);
 
-            $this->redirect('Home/User/login', '', 3, '登录过期！请重新登录！');
+            $this->redirect('User/login', '', 3, '登录过期！请重新登录！跳转中...');
             return;
         }
         session('LAST_OP_TIME',NOW_TIME);// 未过期，更新最后操作时间
