@@ -12,7 +12,10 @@ class MycenterController extends BaseController {
      * @return [type] [description]
      */
     public function sharetoggle() {
-        
+        // AJAX POST
+        // 接受参数{无}
+        // 成功返回true
+        // TODO，失败返回错误信息数组[格式待定]
     }
 
     /**
@@ -20,15 +23,17 @@ class MycenterController extends BaseController {
      * @return [type] [description]
      */
     public function selfshare() {
-        
+        // 独立1个页面展示
+        // GET请求
     }
 
     /**
      * 自己点赞/评论过的分享(self Thumbed aNd Commented)
      * @return [type] [description]
      */
-    public function selftnc() {
-        
+    public function selftncshare() {
+        // 独立1个页面展示自己点赞/评论过的分享
+        // GET请求
     }
 
     /**
@@ -41,7 +46,7 @@ class MycenterController extends BaseController {
         session('USERDATA', null);
         session('SESSION_EXPIRE', null);
 
-        $this->redirect('Home/User/login', '', 3, '安全退出！跳转至登录页面...');
+        $this->redirect('User/login', '', 3, '安全退出！跳转至登录页面...');
     }
 
     /**
@@ -51,7 +56,7 @@ class MycenterController extends BaseController {
      */
     public function chpwd() {
         if (IS_POST){
-            $cur_ask = 'Home/Mycenter/chpwd';
+            $cur_ask = 'Mycenter/chpwd';
             $verify = new \Think\Verify();
             if ($verify->check(I('post.verify'))) {
                 $this->redirect($cur_ask, '', 3, '验证码错误！');
